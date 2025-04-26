@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konsultasi - GANHOSA</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/styleorder.css" />
+  </head>
+  <body>
+    <!-- Navbar-Start -->
+
+    <nav class="navbar">
+      <img src="img/7.png" alt="logo">
+      <a href="index.html" class="navbar-logo">GAN<span>HOSA</span></a>
+      <!-- <a href="#" class="navbar-logo">SLEEPCALL<span>MU</span></a> -->
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="perawat.html">Perawat</a>
+        <a href="konsultasi.html">Konsultasi</a>
+        <a href="promo.html">Promo</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <!-- Navbar-End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="pricelist">
+      <main class="content">
+        <h1>Konsultasi Kesehatan <span>Mudah</span> Dan Murah!</h1>
+        <a href="konsultasi.html" class="cta">Konsultasi Sekarang</a>
+      </main>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Form Order -->
+
+    <div class="container1">
+      <form>
+        <h1>ADA YANG BISA KAMI BANTU?</h1>
+        <input type="text" class="nama" placeholder="NAMA" />
+        <input type="text" class="usia" placeholder="USIA PASIEN" />
+        <input type="text" class="pasien" placeholder="NAMA PASIEN" />
+        <input type="text" class="penyakit" placeholder="RIWAYAT PENYAKIT" />
+        <input type="text" class="jenis" placeholder="JENIS PERAWATAN" />
+        <input type="text" class="obat" placeholder="RIWAYAT KONSUMSI OBAT" />
+        <textarea
+          type="text"
+          class="request"
+          placeholder="TULISKAN SEMUA KELUHAN YANG SEDANG DAN TELAH ANDA RASAKAN"
+        ></textarea>
+        <button type="button" onclick="sendwhatsapp();">SUBMIT</button>
+      </form>
+
+      <script>
+        function sendwhatsapp() {
+          var phonenumber = "+62859181231635";
+
+          var nama = document.querySelector(".nama").value;
+          var usia = document.querySelector(".usia").value;
+          var pasien = document.querySelector(".pasien").value;
+          var penyakit = document.querySelector(".penyakit").value;
+          var jenis = document.querySelector(".jenis").value;
+          var obat = document.querySelector(".obat").value;
+          var request = document.querySelector(".request").value;
+
+          var url =
+            "https://wa.me/" +
+            phonenumber +
+            "?text=" +
+            " *Nama:* " +
+            nama +
+            "%0a" +
+            " *Usia Pasien:* " +
+            usia +
+            "%0a" +
+            " *Nama Pasien:* " +
+            pasien +
+            "%0a" +
+            " *Riwayat Penyakit:* " +
+            penyakit +
+            "%0a" +
+            " *Jenis Perawatan:* " +
+            jenis +
+            "%0a" +
+            " *Riwayat Konsumsi Obat:* " +
+            obat +
+            "%0a" +
+            " *Keluhan:* " +
+            request +
+            "%0a%0a" +
+            "Hai Suster, Tindakan apa yang perlu saya lakukan sekarang? Terimakasih";
+
+          window.open(url, "_blank").focus();
+        }
+      </script>
+    </div>
+
+    <!-- Footer Start-->
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <h3>FOLLOW US AND KEEP UPDATE</h3>
+        <div class="footer-links">
+          <div>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            |
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            |
+            <a href="#"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="links">
+          <a href="index.html">Home</a>
+          |
+          <a href="perawat.html">Perawat</a>
+          |
+          <a href="konsultasi.html">Konsultasi</a>
+          |
+          <a href="promo.html">Promo</a>
+        </div>
+        <p>Hak Cipta <span>GANOSHA</span> di lindungi undang-undang</p>
+      </div>
+    </footer>
+    <!-- Footer End-->
+
+    <!-- Feather Icon -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
