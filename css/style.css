@@ -155,7 +155,7 @@ body {
   position: fixed;
   width: 40px;
   height: 40px;
-  background: rgb(234, 7, 26);
+  background: red;
   bottom: 30px;
   right: 20px;
   z-index: 9999;
